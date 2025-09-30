@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Gaming Hub - Your Ultimate Gaming Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-orbitron font-bold text-purple-400">
+                Nexus<span class="text-blue-400">Hub</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-purple-400 transition duration-300">Tentang Kami</a>
+                <a href="#games" class="hover:text-purple-400 transition duration-300">Games</a>
+                <a href="#pricing" class="hover:text-purple-400 transition duration-300">Harga</a>
+                <a href="#facilities" class="hover:text-purple-400 transition duration-300">Fasilitas</a>
+                <a href="#contact" class="hover:text-purple-400 transition duration-300">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                ☰
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex-col space-y-3">
+            <a href="#about" class="block hover:text-purple-400 transition duration-300">Tentang Kami</a>
+            <a href="#games" class="block hover:text-purple-400 transition duration-300">Games</a>
+            <a href="#pricing" class="block hover:text-purple-400 transition duration-300">Harga</a>
+            <a href="#facilities" class="block hover:text-purple-400 transition duration-300">Fasilitas</a>
+            <a href="#contact" class="block hover:text-purple-400 transition duration-300">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(18, 18, 23, 0.8), rgba(18, 18, 23, 0.8)), url('https://images.unsplash.com/photo-1542751371-29b0a7568553?q=80&w=2070&auto=format&fit=crop');">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-4 animate-fade-in-down">
+                    Welcome to <span class="text-purple-400">Nexus</span> Gaming <span class="text-blue-400">Hub</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+                    Pengalaman bermain game terbaik dengan PC spesifikasi dewa, koneksi internet super cepat, dan komunitas yang solid.
+                </p>
+                <a href="#pricing" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    Mulai Bermain Sekarang!
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">Tentang <span class="text-purple-400">NexusHub</span></h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-gray-300">
+                    Nexus Gaming Hub didirikan oleh gamer, untuk gamer. Kami menyediakan arena bermain game premium dengan hardware terkini, kursi gaming yang nyaman, dan suasana yang dirancang untuk meningkatkan pengalaman kompetitif dan kasual Anda. Misi kami adalah menjadi pusat komunitas gaming di kota ini.
+                </p>
+            </div>
+        </section>
+
+        <hr class="border-gray-700">
+
+        <section id="games" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Game Terpopuler Kami</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/valorantclip (online-video-cutter.com).mp4" loop muted autoplay playsinline></video>
+                            <img src="images/valorant.jpeg" alt="Valorant" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Valorant</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/doat2clip.mp4" loop muted autoplay playsinline></video>
+                            <img src="images/dota2.jpeg" alt="Dota 2" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Dota 2</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/pubgclip.mp4" loop muted autoplay playsinline></video>
+                            <img src="images/PUBG.jpeg" alt="PUBG: BATTLEGROUNDS" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">PUBG: BATTLEGROUNDS</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/apexlclip.mp4" loop muted autoplay playsinline></video>
+                            <img src="images/apexl.png" alt="Apex Legends" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Apex Legends</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/wuwaclip.mp4" loop muted autoplay playsinline></video>
+                            <img src="images/wuwa.jpeg" alt="Wuthering Waves" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Wuthering Waves</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="border-gray-700">
+        <section id="pricing" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Paket Harga</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gray-800 border-2 border-transparent hover:border-purple-500 p-8 rounded-lg transition duration-300">
+                        <h3 class="text-2xl font-bold mb-4">Paket Reguler</h3>
+                        <p class="text-4xl font-orbitron font-bold mb-4">Rp 5.000<span class="text-lg font-normal">/jam</span></p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li>PC Standar Gaming</li>
+                            <li>Koneksi 100 Mbps</li>
+                            <li>Akses semua game</li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Pilih Paket</button>
+                    </div>
+                    <div class="bg-gray-800 border-2 border-blue-500 p-8 rounded-lg transform scale-105 relative">
+                        <span class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase absolute -top-4">Paling Laris</span>
+                        <h3 class="text-2xl font-bold mb-4">Paket Pro</h3>
+                        <p class="text-4xl font-orbitron font-bold mb-4">Rp 20.000<span class="text-lg font-normal">/5 jam</span></p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li>PC High-End (RTX Series)</li>
+                            <li>Koneksi 250 Mbps</li>
+                            <li>Termasuk Minuman Ringan</li>
+                        </ul>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Pilih Paket</button>
+                    </div>
+                    <div class="bg-gray-800 border-2 border-transparent hover:border-purple-500 p-8 rounded-lg transition duration-300">
+                        <h3 class="text-2xl font-bold mb-4">Paket Sultan</h3>
+                        <p class="text-4xl font-orbitron font-bold mb-4">Rp 50.000<span class="text-lg font-normal">/12 jam</span></p>
+                        <ul class="text-gray-300 space-y-2 mb-6">
+                            <li>PC Spek Sultan (RTX 4090)</li>
+                            <li>Koneksi Prioritas 500 Mbps</li>
+                            <li>Termasuk Snack & Minuman</li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="border-gray-700">
+
+        <section id="facilities" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Fasilitas Kami</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl">🖥️</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">PC Spek Tinggi</h3>
+                            <p class="text-gray-400">Dilengkapi dengan CPU & GPU terbaru untuk performa game maksimal tanpa lag.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl">🌐</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Internet Cepat</h3>
+                            <p class="text-gray-400">Koneksi fiber optik super cepat dan stabil untuk pengalaman online yang mulus.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl">❄️</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Ruangan Full AC</h3>
+                            <p class="text-gray-400">Tetap sejuk dan nyaman bahkan saat sesi bermain game yang paling intens.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl">🍔</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Kafe & Snack</h3>
+                            <p class="text-gray-400">Tersedia berbagai pilihan makanan dan minuman untuk menemani bermain.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl">🎧</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Periferal Gaming</h3>
+                            <p class="text-gray-400">Keyboard mekanikal, mouse gaming, dan headset berkualitas tinggi di setiap PC.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-purple-400 text-3xl">🚭</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Area Bebas Rokok</h3>
+                            <p class="text-gray-400">Area bermain utama kami bebas dari asap rokok untuk kenyamanan semua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-700">
+
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">Hubungi Kami</h2>
+                <p class="text-gray-400 mb-8">Punya pertanyaan atau ingin booking tempat? Jangan ragu hubungi kami!</p>
+                <div class="max-w-md mx-auto">
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" placeholder="Nama Anda" class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
+                        <input type="email" placeholder="Email Anda" class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
+                        <textarea rows="4" placeholder="Pesan Anda" class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Nexus Gaming Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // =========== [BARU] JavaScript untuk Video Hover ===========
+        document.querySelectorAll('.game-card').forEach(card => {
+            const video = card.querySelector('.game-video');
+            const poster = card.querySelector('.game-poster');
+            
+            card.addEventListener('mouseenter', () => {
+                // Jangan sembunyikan poster, cukup ubah opacity-nya agar kontainer tetap punya ukuran
+                poster.style.opacity = '0';
+                video.classList.remove('hidden');
+                video.play();
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                poster.style.opacity = '1';
+                video.classList.add('hidden');
+                video.pause();
+                video.currentTime = 0; // Reset video ke awal
+            });
+        });
+
+    </script>
+
+</body>
+</html>
