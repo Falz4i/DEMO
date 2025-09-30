@@ -15,6 +15,10 @@
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
         }
+        /* Tambahkan transisi untuk opacity pada poster */
+        .game-poster {
+            transition: opacity 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
@@ -78,7 +82,7 @@
                     
                     <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
                         <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/valorantclip (online-video-cutter.com).mp4" loop muted autoplay playsinline></video>
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/valorantclip (online-video-cutter.com).mp4" loop muted playsinline></video>
                             <img src="images/valorant.jpeg" alt="Valorant" class="game-poster w-full h-auto rounded-t-lg">
                         </div>
                         <div class="p-4">
@@ -88,7 +92,7 @@
 
                     <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
                         <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/doat2clip.mp4" loop muted autoplay playsinline></video>
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/doat2clip.mp4" loop muted playsinline></video>
                             <img src="images/dota2.jpeg" alt="Dota 2" class="game-poster w-full h-auto rounded-t-lg">
                         </div>
                         <div class="p-4">
@@ -98,7 +102,7 @@
 
                     <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
                         <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/pubgclip.mp4" loop muted autoplay playsinline></video>
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/pubgclip.mp4" loop muted playsinline></video>
                             <img src="images/PUBG.jpeg" alt="PUBG: BATTLEGROUNDS" class="game-poster w-full h-auto rounded-t-lg">
                         </div>
                         <div class="p-4">
@@ -108,7 +112,7 @@
 
                     <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
                         <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/apexlclip.mp4" loop muted autoplay playsinline></video>
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/apexlclip.mp4" loop muted playsinline></video>
                             <img src="images/apexl.png" alt="Apex Legends" class="game-poster w-full h-auto rounded-t-lg">
                         </div>
                         <div class="p-4">
@@ -118,7 +122,7 @@
 
                     <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
                         <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/wuwaclip.mp4" loop muted autoplay playsinline></video>
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/wuwaclip.mp4" loop muted playsinline></video>
                             <img src="images/wuwa.jpeg" alt="Wuthering Waves" class="game-poster w-full h-auto rounded-t-lg">
                         </div>
                         <div class="p-4">
@@ -257,26 +261,33 @@
             mobileMenu.classList.toggle('flex');
         });
 
-        // =========== [BARU] JavaScript untuk Video Hover ===========
+        // =========== [MODIFIKASI] JavaScript untuk Video Hover ===========
         document.querySelectorAll('.game-card').forEach(card => {
             const video = card.querySelector('.game-video');
             const poster = card.querySelector('.game-poster');
             
             card.addEventListener('mouseenter', () => {
-                // Jangan sembunyikan poster, cukup ubah opacity-nya agar kontainer tetap punya ukuran
+                // Sembunyikan poster dengan membuatnya transparan
                 poster.style.opacity = '0';
+                // Tampilkan video
                 video.classList.remove('hidden');
-                video.play();
+                // Mulai video
+                video.play().catch(error => {
+                    // Mencegah error di beberapa browser jika video belum siap
+                    console.log("Video play was prevented:", error);
+                });
             });
             
             card.addEventListener('mouseleave', () => {
+                // Tampilkan kembali poster
                 poster.style.opacity = '1';
+                // Sembunyikan video
                 video.classList.add('hidden');
+                // Jeda dan reset video
                 video.pause();
-                video.currentTime = 0; // Reset video ke awal
+                video.currentTime = 0;
             });
         });
-
     </script>
 
 </body>
