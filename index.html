@@ -21,6 +21,15 @@
         }
     </style>
 </head>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Efek smooth scroll dan alert saat kirim pesan
+    $("form").on("submit", function() {
+        alert("Pesan Anda akan dikirim ke server...");
+    });
+</script>
+
 <body class="bg-gray-900 text-white">
 
     <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
@@ -75,63 +84,15 @@
 
         <hr class="border-gray-700">
 
-        <section id="games" class="py-20 bg-gray-800">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Game Terpopuler Kami</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                    
-                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
-                        <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/valorantclip (online-video-cutter.com).mp4" loop muted playsinline></video>
-                            <img src="images/valorant.jpeg" alt="Valorant" class="game-poster w-full h-auto rounded-t-lg">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold">Valorant</h3>
-                        </div>
-                    </div>
-
-                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
-                        <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/doat2clip.mp4" loop muted playsinline></video>
-                            <img src="images/dota2.jpeg" alt="Dota 2" class="game-poster w-full h-auto rounded-t-lg">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold">Dota 2</h3>
-                        </div>
-                    </div>
-
-                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
-                        <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/pubgclip.mp4" loop muted playsinline></video>
-                            <img src="images/PUBG.jpeg" alt="PUBG: BATTLEGROUNDS" class="game-poster w-full h-auto rounded-t-lg">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold">PUBG: BATTLEGROUNDS</h3>
-                        </div>
-                    </div>
-
-                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
-                        <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/apexlclip.mp4" loop muted playsinline></video>
-                            <img src="images/apexl.png" alt="Apex Legends" class="game-poster w-full h-auto rounded-t-lg">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold">Apex Legends</h3>
-                        </div>
-                    </div>
-
-                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
-                        <div class="relative">
-                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/wuwaclip.mp4" loop muted playsinline></video>
-                            <img src="images/wuwa.jpeg" alt="Wuthering Waves" class="game-poster w-full h-auto rounded-t-lg">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold">Wuthering Waves</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="games" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Game Terpopuler Kami</h2>
+        
+        <div id="games-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <p class="text-gray-400 text-lg col-span-full">Memuat data game...</p>
+        </div>
+        </div>
+</section>
         
         <hr class="border-gray-700">
         <section id="pricing" class="py-20 bg-gray-900">
@@ -232,14 +193,19 @@
                 <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">Hubungi Kami</h2>
                 <p class="text-gray-400 mb-8">Punya pertanyaan atau ingin booking tempat? Jangan ragu hubungi kami!</p>
                 <div class="max-w-md mx-auto">
-                    <form action="#" method="POST" class="space-y-4">
-                        <input type="text" placeholder="Nama Anda" class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
-                        <input type="email" placeholder="Email Anda" class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
-                        <textarea rows="4" placeholder="Pesan Anda" class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500"></textarea>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                    <form action="contact.php" method="POST" class="space-y-4">
+                        <input type="text" name="nama" placeholder="Nama Anda" required
+                            class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
+                        <input type="email" name="email" placeholder="Email Anda" required
+                            class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
+                        <textarea name="pesan" rows="4" placeholder="Pesan Anda" required
+                            class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500"></textarea>
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
                             Kirim Pesan
                         </button>
                     </form>
+
                 </div>
             </div>
         </section>
@@ -289,6 +255,11 @@
             });
         });
     </script>
+<script>
+        // ... (kode JS Anda yang sudah ada)
+    </script>
+    
+    <script src="fetch_games.js"></script>
 
 </body>
 </html>
