@@ -15,21 +15,11 @@
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
         }
-        /* Tambahkan transisi untuk opacity pada poster */
         .game-poster {
             transition: opacity 0.3s ease-in-out;
         }
     </style>
 </head>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    // Efek smooth scroll dan alert saat kirim pesan
-    $("form").on("submit", function() {
-        alert("Pesan Anda akan dikirim ke server...");
-    });
-</script>
-
 <body class="bg-gray-900 text-white">
 
     <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
@@ -60,10 +50,10 @@
     <main>
         <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(18, 18, 23, 0.8), rgba(18, 18, 23, 0.8)), url('https://images.unsplash.com/photo-1542751371-29b0a7568553?q=80&w=2070&auto=format&fit=crop');">
             <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-4 animate-fade-in-down">
+                <h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-4">
                     Welcome to <span class="text-purple-400">Nexus</span> Gaming <span class="text-blue-400">Hub</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                     Pengalaman bermain game terbaik dengan PC spesifikasi dewa, koneksi internet super cepat, dan komunitas yang solid.
                 </p>
                 <a href="#pricing" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
@@ -84,22 +74,84 @@
 
         <hr class="border-gray-700">
 
-<section id="games" class="py-20 bg-gray-800">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Game Terpopuler Kami</h2>
-        
-        <div id="games-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <p class="text-gray-400 text-lg col-span-full">Memuat data game...</p>
-        </div>
-        </div>
-</section>
+        <section id="games" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Game Terpopuler Kami</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/valorantclip (online-video-cutter.com).mp4" loop muted playsinline></video>
+                            <img src="images/valorant.jpeg" alt="Valorant" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Valorant</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/doat2clip.mp4" loop muted playsinline></video>
+                            <img src="images/dota2.jpeg" alt="Dota 2" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Dota 2</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/pubgclip.mp4" loop muted playsinline></video>
+                            <img src="images/PUBG.jpeg" alt="PUBG: BATTLEGROUNDS" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">PUBG: BATTLEGROUNDS</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/apexlclip.mp4" loop muted playsinline></video>
+                            <img src="images/apexl.png" alt="Apex Legends" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Apex Legends</h3>
+                        </div>
+                    </div>
+
+                    <div class="game-card bg-gray-700 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+                        <div class="relative">
+                            <video class="game-video absolute top-0 left-0 w-full h-full object-cover rounded-t-lg hidden" src="videos/wuwaclip.mp4" loop muted playsinline></video>
+                            <img src="images/wuwa.jpeg" alt="Wuthering Waves" class="game-poster w-full h-auto rounded-t-lg">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold">Wuthering Waves</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-gray-700">
+
+        <section id="other-games" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">
+                    Game Populer Lainnya
+                </h2>
+                <div id="api-games-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <p class="col-span-full text-gray-400">Memuat game...</p>
+                </div>
+            </div>
+        </section>
         
         <hr class="border-gray-700">
-        <section id="pricing" class="py-20 bg-gray-900">
+        
+        <section id="pricing" class="py-20 bg-gray-800">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-12">Paket Harga</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-gray-800 border-2 border-transparent hover:border-purple-500 p-8 rounded-lg transition duration-300">
+                    <div class="bg-gray-700 border-2 border-transparent hover:border-purple-500 p-8 rounded-lg transition duration-300">
                         <h3 class="text-2xl font-bold mb-4">Paket Reguler</h3>
                         <p class="text-4xl font-orbitron font-bold mb-4">Rp 5.000<span class="text-lg font-normal">/jam</span></p>
                         <ul class="text-gray-300 space-y-2 mb-6">
@@ -109,7 +161,7 @@
                         </ul>
                         <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">Pilih Paket</button>
                     </div>
-                    <div class="bg-gray-800 border-2 border-blue-500 p-8 rounded-lg transform scale-105 relative">
+                    <div class="bg-gray-700 border-2 border-blue-500 p-8 rounded-lg transform scale-105 relative">
                         <span class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase absolute -top-4">Paling Laris</span>
                         <h3 class="text-2xl font-bold mb-4">Paket Pro</h3>
                         <p class="text-4xl font-orbitron font-bold mb-4">Rp 20.000<span class="text-lg font-normal">/5 jam</span></p>
@@ -120,7 +172,7 @@
                         </ul>
                         <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Pilih Paket</button>
                     </div>
-                    <div class="bg-gray-800 border-2 border-transparent hover:border-purple-500 p-8 rounded-lg transition duration-300">
+                    <div class="bg-gray-700 border-2 border-transparent hover:border-purple-500 p-8 rounded-lg transition duration-300">
                         <h3 class="text-2xl font-bold mb-4">Paket Sultan</h3>
                         <p class="text-4xl font-orbitron font-bold mb-4">Rp 50.000<span class="text-lg font-normal">/12 jam</span></p>
                         <ul class="text-gray-300 space-y-2 mb-6">
@@ -136,7 +188,7 @@
         
         <hr class="border-gray-700">
 
-        <section id="facilities" class="py-20 bg-gray-800">
+        <section id="facilities" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-center mb-12">Fasilitas Kami</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -188,78 +240,108 @@
 
         <hr class="border-gray-700">
 
-        <section id="contact" class="py-20 bg-gray-900">
+        <section id="contact" class="py-20 bg-gray-800">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">Hubungi Kami</h2>
                 <p class="text-gray-400 mb-8">Punya pertanyaan atau ingin booking tempat? Jangan ragu hubungi kami!</p>
                 <div class="max-w-md mx-auto">
                     <form action="contact.php" method="POST" class="space-y-4">
-                        <input type="text" name="nama" placeholder="Nama Anda" required
-                            class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
-                        <input type="email" name="email" placeholder="Email Anda" required
-                            class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500">
-                        <textarea name="pesan" rows="4" placeholder="Pesan Anda" required
-                            class="w-full bg-gray-800 p-3 rounded-md border border-gray-700 focus:outline-none focus:border-purple-500"></textarea>
-                        <button type="submit"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                        <input type="text" name="nama" placeholder="Nama Anda" required class="w-full bg-gray-700 p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                        <input type="email" name="email" placeholder="Email Anda" required class="w-full bg-gray-700 p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                        <textarea name="pesan" rows="4" placeholder="Pesan Anda" required class="w-full bg-gray-700 p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
                             Kirim Pesan
                         </button>
                     </form>
-
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-800 py-6">
+    <footer class="bg-gray-900 py-6">
         <div class="container mx-auto px-6 text-center text-gray-400">
             <p>&copy; 2025 Nexus Gaming Hub. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript untuk mobile menu toggle
+        // 1. Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+            });
+        }
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-        });
-
-        // =========== [MODIFIKASI] JavaScript untuk Video Hover ===========
-        document.querySelectorAll('.game-card').forEach(card => {
+        // 2. Video Hover untuk Game Lokal
+        document.querySelectorAll('#games .game-card').forEach(card => {
             const video = card.querySelector('.game-video');
             const poster = card.querySelector('.game-poster');
-            
+            if (!video || !poster) return;
+
             card.addEventListener('mouseenter', () => {
-                // Sembunyikan poster dengan membuatnya transparan
                 poster.style.opacity = '0';
-                // Tampilkan video
                 video.classList.remove('hidden');
-                // Mulai video
-                video.play().catch(error => {
-                    // Mencegah error di beberapa browser jika video belum siap
-                    console.log("Video play was prevented:", error);
-                });
+                video.play().catch(e => console.error("Error playing video:", e));
             });
             
             card.addEventListener('mouseleave', () => {
-                // Tampilkan kembali poster
                 poster.style.opacity = '1';
-                // Sembunyikan video
                 video.classList.add('hidden');
-                // Jeda dan reset video
                 video.pause();
                 video.currentTime = 0;
             });
         });
+
+        // 3. Form Submission Feedback
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function() {
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.textContent = 'Mengirim...';
+                submitButton.disabled = true;
+            });
+        }
+
+        // 4. Fetch Game dari API
+        document.addEventListener('DOMContentLoaded', async () => {
+            const gamesGrid = document.getElementById('api-games-grid');
+            // 🚨 GANTI DENGAN API KEY ANDA 🚨
+            const apiKey = '3a21c71ec6c74a718207337fd9c245d7';
+            const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}&ordering=-popular-action&page_size=10&platforms=4`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                
+                const data = await response.json();
+                gamesGrid.innerHTML = ''; // Hapus pesan loading
+                
+                data.results.forEach(game => {
+                    const genres = game.genres.map(g => g.name).slice(0, 2).join(', ');
+                    const gameCardHTML = `
+                        <a href="https://rawg.io/games/${game.slug}" target="_blank" class="block bg-gray-800 rounded-lg transform hover:-translate-y-2 transition duration-300 overflow-hidden text-left">
+                            <div class="relative">
+                                <img src="${game.background_image || 'https://via.placeholder.com/400x225?text=No+Image'}" alt="${game.name}" class="w-full h-40 object-cover">
+                                <span class="absolute top-2 right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">⭐ ${game.rating.toFixed(1)}</span>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="font-bold truncate text-white">${game.name}</h3>
+                                <p class="text-xs text-gray-400 mt-1 truncate">${genres}</p>
+                            </div>
+                        </a>
+                    `;
+                    gamesGrid.innerHTML += gameCardHTML;
+                });
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                gamesGrid.innerHTML = '<p class="col-span-full text-red-400">Gagal memuat game. Coba lagi nanti.</p>';
+            }
+        });
     </script>
-<script>
-        // ... (kode JS Anda yang sudah ada)
-    </script>
-    
-    <script src="fetch_games.js"></script>
 
 </body>
 </html>
