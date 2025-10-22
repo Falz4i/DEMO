@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Valorant",
+        "image": "images/valorant.jpeg",
+        "video": "videos/valorantclip (online-video-cutter.com).mp4"
+    },
+    {
+        "id": 2,
+        "name": "Dota 2",
+        "image": "images/dota2.jpeg",
+        "video": "videos/doat2clip.mp4"
+    },
+    {
+        "id": 3,
+        "name": "PUBG: BATTLEGROUNDS",
+        "image": "images/PUBG.jpeg",
+        "video": "videos/pubgclip.mp4"
+    },
+    {
+        "id": 4,
+        "name": "Apex Legends",
+        "image": "images/apexl.png",
+        "video": "videos/apexlclip.mp4"
+    },
+    {
+        "id": 5,
+        "name": "Wuthering Waves",
+        "image": "images/wuwa.jpeg",
+        "video": "videos/wuwaclip.mp4"
+    }
+]
